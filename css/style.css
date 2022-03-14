@@ -1,0 +1,114 @@
+:root {
+    --purple: rgb(85, 85, 131);
+    --grey: rgb(75, 75, 75);
+    --dark-grey: rgb(50, 50, 50);
+    --red: rgb(215, 80, 80);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--dark-grey);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.detailsContainer {
+    max-width: 65%;
+    margin: auto;
+    padding: 20px;
+}
+
+.detailsContainer img {
+    width: 49.7%;
+}
+
+.card {
+    text-align: center;
+    color: white;
+    background: var(--purple);
+    padding-bottom: 10px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.card:hover {
+    background: var(--dark-grey);
+}
+
+.card h2 {
+    margin-bottom: auto;
+}
+
+.card p {
+    margin-top: auto;
+}
+
+.details {
+    margin: auto;
+}
+
+.title {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background: var(--purple);
+    color: white;
+    padding: 10px 25px;
+    margin: 5px auto;
+}
+
+.title p {
+    max-width: 500px;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin-right: 10px;
+    color: white;
+}
+
+.btn:hover, .btn-details:hover {
+    background: var(--dark-grey);
+}
+
+.btn-home {
+    background: var(--purple);
+}
+
+.btn-contact {
+    background: var(--grey);
+}
+
+.btn-details {
+    color: white;
+    font-size: 1.3em;
+    background: var(--grey);
+    padding: 35px;
+    margin: auto 0 auto auto;
+}
+
+.error {
+    padding: 20px 25px;
+    background: var(--red);
+    color: white;
+}
