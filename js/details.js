@@ -1,4 +1,5 @@
-const detailsContainer = document.querySelector(".detailsContainer");
+const detailsContainer = document.querySelector(".container");
+const titleContainer = document.querySelector("#title");
 
 const queryString = document.location.search;
 
@@ -20,8 +21,10 @@ async function gameDetails() {
 
     console.log(game);
 
+    titleContainer.innerHTML = `F2P Games | ${game.title}`;
+
     detailsContainer.innerHTML = `<div class="details">
-                                    <div class="title">
+                                    <div class="header">
                                         <div>
                                             <h2>${game.title}</h2>
                                             <p>${game.short_description}</p>

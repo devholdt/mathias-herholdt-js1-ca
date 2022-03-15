@@ -2,7 +2,12 @@
     --purple: rgb(85, 85, 131);
     --grey: rgb(75, 75, 75);
     --dark-grey: rgb(50, 50, 50);
+    --light-grey: #eeeeee;
     --red: rgb(215, 80, 80);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -26,19 +31,22 @@ header {
     border-bottom: 1px solid var(--dark-grey);
 }
 
-.container {
+.listContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    margin: 30px auto;
 }
 
-.detailsContainer {
-    max-width: 65%;
-    margin: auto;
-    padding: 20px;
+.container {
+    max-width: 900px;
+    margin: 2em auto;
+    background: var(--light-grey);
+    border-radius: 20px;
+    padding: 30px;
 }
 
-.detailsContainer img {
+.container img {
     width: 49.7%;
 }
 
@@ -67,7 +75,7 @@ header {
     margin: auto;
 }
 
-.title {
+.header {
     display: grid;
     grid-template-columns: auto 1fr;
     background: var(--purple);
@@ -76,8 +84,9 @@ header {
     margin: 5px auto;
 }
 
-.title p {
+.header p {
     max-width: 500px;
+    margin-right: 15px;
 }
 
 .btn {
@@ -111,4 +120,40 @@ header {
     padding: 20px 25px;
     background: var(--red);
     color: white;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border: 1px solid var(--grey);
+}
+
+#formSubmit {
+    padding: 20px 70px;
+    margin-top: 2em;
+    font-size: 1em;
+    background: var(--purple);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#validationMessage {
+    display: none;
+    width: fit-content;
+    padding: 15px 100px;
+    margin: auto auto 15px auto;
+    border-radius: 10px;
+    background: rgba(0, 128, 0, 0.2);
+    border: 1px solid green;
+}
+
+.form-error {
+    display: none;
+    color: var(--red);
+    font-weight: 600;
 }
