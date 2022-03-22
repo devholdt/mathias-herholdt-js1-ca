@@ -38,7 +38,15 @@ header {
     margin: 30px auto;
 }
 
-.container {
+.detailsContainer {
+    margin: 2em auto;
+    max-width: 900px;
+    background: var(--light-grey);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.contactContainer {
     max-width: 900px;
     margin: 2em auto;
     background: var(--light-grey);
@@ -46,7 +54,7 @@ header {
     padding: 30px;
 }
 
-.container img {
+.detailsContainer img {
     width: 49.7%;
 }
 
@@ -69,10 +77,6 @@ header {
 
 .card p {
     margin-top: auto;
-}
-
-.details {
-    margin: auto;
 }
 
 .header {
@@ -120,6 +124,25 @@ header {
     padding: 20px 25px;
     background: var(--red);
     color: white;
+}
+
+.loading {
+    margin: auto;
+    border: 10px solid var(--light-grey);
+    border-top: 10px solid var(--purple);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 input {

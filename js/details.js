@@ -1,5 +1,5 @@
-const detailsContainer = document.querySelector(".container");
-const titleContainer = document.querySelector("#title");
+const container = document.querySelector(".detailsContainer");
+const title = document.querySelector("#title");
 
 const queryString = document.location.search;
 
@@ -21,9 +21,11 @@ async function gameDetails() {
 
     console.log(game);
 
-    titleContainer.innerHTML = `F2P Games | ${game.title}`;
+    title.innerHTML = `F2P Games | ${game.title}`;
 
-    detailsContainer.innerHTML = `<div class="details">
+    console.log(title.innerHTML);
+
+    container.innerHTML = `<div class="details">
                                     <div class="header">
                                         <div>
                                             <h2>${game.title}</h2>
@@ -43,6 +45,9 @@ async function gameDetails() {
                                 </div>`;
   } catch (error) {
     console.log(error);
+    container.innerHTML = errorMessage(
+      "An error occured when fetching game details"
+    );
   }
 }
 
